@@ -49,6 +49,39 @@ header h1 {
   text-shadow: 1px 2px 5px rgba(0,0,0,0.2);
 }
 
+header h1 {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap; /* makes it drop on mobile */
+}
+
+header h1 img {
+  width: 120px;
+  height: 120px;
+}
+
+header h1 span {
+  font-size: 32px;
+  line-height: 1.1;
+}
+
+/* Mobile fix */
+@media (max-width: 600px) {
+  header h1 {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  header h1 img {
+    width: 100px;
+    height: 100px;
+  }
+
+  header h1 span {
+    font-size: 28px;
+  }
+}
 
 nav a {
   color: #fff;
