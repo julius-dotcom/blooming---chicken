@@ -1,7 +1,6 @@
 /* ===========================
    BLOOMING CHICKEN — STYLE.CSS
    =========================== */
-
 * {
   margin: 0;
   padding: 0;
@@ -10,12 +9,11 @@
 }
 
 body {
-  background-color:white;
+  background-color: white;
   color: #333;
   line-height: 1.6;
   overflow-x: hidden;
 }
-
 
 /* ===========================
    HEADER
@@ -28,17 +26,17 @@ header {
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  gap: 1.5rem;        /* makes spacing cleaner */
+  text-align: center; /* helps on mobile */
 }
 
-
-
-
+/* Logo + Title Wrapper */
 header h1 {
   display: flex;
   align-items: center;
   gap: 12px;
-  flex-wrap: wrap; /* makes it drop on mobile */
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 header img {
@@ -46,38 +44,37 @@ header img {
   height: 120px;
   border-radius: 50%;
   object-fit: cover;
-  margin-right: 10px;
 }
 
-@media (max-width: 600px) {
-  header img {
-    width: 90px;
-    height: 90px;
-    margin-right: 0;
-  }
-}
-
+/* Title Text */
 header h1 span {
   font-size: 32px;
   line-height: 1.1;
 }
 
-/* Mobile fix */
+/* ===========================
+   MOBILE STYLES
+   =========================== */
 @media (max-width: 600px) {
-  header h1 {
-    flex-direction: column;
-    text-align: center;
+  header {
+    flex-direction: column;     /* puts everything vertically */
+    padding: 1.5rem 1rem;
   }
 
-  header h1 img {
-    width: 100px;
-    height: 100px;
+  header h1 {
+    flex-direction: column;     /* image on top, text below */
+  }
+
+  header img {
+    width: 90px;
+    height: 90px;
   }
 
   header h1 span {
-    font-size: 28px;
+    font-size: 26px;
   }
 }
+
 
 nav a {
   color: #fff;
