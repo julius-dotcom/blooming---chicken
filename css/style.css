@@ -623,6 +623,16 @@ footer a {
   animation: fadeSlideUp 1.5s ease-out forwards;
   animation-delay: 0.6s;
 }
-
+/* Add this rule to your style.css file */
+.page-content-wrapper {
+    /* Sets the content to take up a maximum of 1200 pixels */
+    max-width: 1200px;
+    
+    /* Ensures the container uses 90% of the screen width on smaller devices */
+    width: 90%; 
+    
+    /* CRITICAL FIX: Centers the entire block horizontally */
+    margin: 0 auto; 
+}
 
 /* ===== ADDITIONAL STYLES ===== */
